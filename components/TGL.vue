@@ -3,7 +3,7 @@
     <div v-for="(cell, index) in cells">
       <div class="cell cell-1">
         <p class="tgl-num">{{ index + 1 }}</p>
-        <p>{{ cell[index + 1].dinten }} {{ cell[index +1].pasaran }}</p>
+        <p class="tgl-dinpar">{{ capitalizeFirstLetter(cell[index + 1].dinten) }} {{ capitalizeFirstLetter(cell[index +1].pasaran) }}</p>
       </div>
     </div>
   </div>
@@ -25,6 +25,9 @@ export default {
       const _s = s.get(k)
       console.log(_s)
       this.cells = _s
+    },
+    capitalizeFirstLetter (string) {
+      return string.charAt(0).toUpperCase() + string.slice(1)
     }
   },
   created() {
@@ -52,6 +55,10 @@ export default {
 .cell .tgl-num {
   font-weight: 700;
   font-size: 2rem;
+}
+
+.cell .tgl-dinpar {
+  font-weight: 500;
 }
 .cell-1 {
   background: deepskyblue;
