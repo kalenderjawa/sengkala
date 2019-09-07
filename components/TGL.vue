@@ -12,8 +12,8 @@
     <div class="container">
       <div class="tgl-container">
         <div v-for="(cell, index) in cells">
-          <div class="cell cell-1">
-            <p class="tgl-num">{{ index + 1 }}</p>
+          <div class="cell cell-1" v-on:click.capture="tglEventHandler">
+            <p class="tgl-num" :id="`tgl-${index + 1}`" :data-tgl="[index + 1, cell[index+1].dinten, cell[index +1].pasaran]">{{ index + 1 }}</p>
             <p class="tgl-dinpar">
               <span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>
               <span class="tgl-pas">{{ capitalizeFirstLetter(cell[index +1].pasaran) }}</span>
@@ -43,6 +43,11 @@ export default {
     },
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
+    },
+    tglEventHandler(event) {
+      if(event.target.hasAttribute('data-tgl')) {
+        console.log(event.target.getAttribute('data-tgl'))
+      }
     }
   },
   created() {
