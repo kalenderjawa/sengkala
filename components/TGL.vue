@@ -1,12 +1,20 @@
 <template>
-  <div class="tgl-container">
-    <div v-for="(cell, index) in cells">
-      <div class="cell cell-1">
-        <p class="tgl-num">{{ index + 1 }}</p>
-        <p class="tgl-dinpar">{{ capitalizeFirstLetter(cell[index + 1].dinten) }} {{ capitalizeFirstLetter(cell[index +1].pasaran) }}</p>
+  <section class="section">
+    <div class="container"></div>
+    <div class="container">
+      <div class="tgl-container">
+        <div v-for="(cell, index) in cells">
+          <div class="cell cell-1">
+            <p class="tgl-num">{{ index + 1 }}</p>
+            <p class="tgl-dinpar">
+              <span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>
+              <span class="tgl-pas">{{ capitalizeFirstLetter(cell[index +1].pasaran) }}</span>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -25,7 +33,7 @@ export default {
       const _s = s.get(k)
       this.cells = _s
     },
-    capitalizeFirstLetter (string) {
+    capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     }
   },
@@ -36,8 +44,11 @@ export default {
 </script>
 
 <style>
-.container {
-  margin: 2.5em 3em !important;
+.tgl-id {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  font-size: 25px;
 }
 
 .tgl-container {
@@ -73,7 +84,6 @@ export default {
   font-weight: 500;
 }
 .cell-1 {
-  background:transparent !important;
+  background: transparent !important;
 }
-
 </style>
