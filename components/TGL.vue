@@ -1,49 +1,42 @@
 <template>
   <div class="tgl-container">
-    <div class="cell cell-1">1</div>
-    <div class="cell cell-2">2</div>
-    <div class="cell cell-3">3</div>
-    <div class="cell cell-4">4</div>
-    <div class="cell cell-5">5</div>
-    <div class="cell cell-6">6</div>
-    <div class="cell cell-7">7</div>
-    <div class="cell cell-8">8</div>
-    <div class="cell cell-9">9</div>
-    <div class="cell cell-4">10</div>
-    <div class="cell cell-1">11</div>
-    <div class="cell cell-2">12</div>
-    <div class="cell cell-3">13</div>
-    <div class="cell cell-4">14</div>
-    <div class="cell cell-5">15</div>
-    <div class="cell cell-6">16</div>
-    <div class="cell cell-7">17</div>
-    <div class="cell cell-8">18</div>
-    <div class="cell cell-9">19</div>
-    <div class="cell cell-1">20</div>
-    <div class="cell cell-5">21</div>
-    <div class="cell cell-2">22</div>
-    <div class="cell cell-3">23</div>
-    <div class="cell cell-4">24</div>
-    <div class="cell cell-5">25</div>
-    <div class="cell cell-6">26</div>
-    <div class="cell cell-7">27</div>
-    <div class="cell cell-8">28</div>
-    <div class="cell cell-9">29</div>
-    <div class="cell cell-1">30</div>
-    <div class="cell cell-5">31</div>
+    <div v-for="(cell, index) in cells">
+      <div class="cell cell-1">
+        <p class="tgl-num">{{ index + 1 }}</p>
+        <p>{{ cell[index + 1].dinten }} {{ cell[index +1].pasaran }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import * as KalenderJawa from '@kalenderjawa/pustaka'
+
 export default {
-  name: 'TGL'
+  name: 'TGL',
+  data() {
+    return {
+      cells: []
+    }
+  },
+  methods: {
+    async sasiPenuh() {
+      const { k, s } = await KalenderJawa.sasi('mukarom', 1953)
+      const _s = s.get(k)
+      console.log(_s)
+      this.cells = _s
+    }
+  },
+  created() {
+    this.sasiPenuh()
+  }
 }
 </script>
 
 <style>
 .tgl-container {
   height: 40vh;
-  margin: 2rem;
+  margin: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -51,35 +44,17 @@ export default {
 }
 .cell {
   color: white;
-  font-size: 3rem;
+  font-size: 1rem;
   text-align: center;
-  padding: 3rem;
+  padding: 1rem;
+}
+
+.cell .tgl-num {
+  font-weight: 700;
+  font-size: 2rem;
 }
 .cell-1 {
   background: deepskyblue;
 }
-.cell-2 {
-  background: orangered;
-}
-.cell-3 {
-  background: royalblue;
-}
-.cell-4 {
-  background: gold;
-}
-.cell-5 {
-  background: blueviolet;
-}
-.cell-6 {
-  background: limegreen;
-}
-.cell-7 {
-  background: coral;
-}
-.cell-8 {
-  background: lightseagreen;
-}
-.cell-9 {
-  background: maroon;
-}
+
 </style>
