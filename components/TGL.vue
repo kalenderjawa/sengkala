@@ -37,16 +37,25 @@ export default {
 </script>
 
 <style>
+.container {
+  margin: 5em !important;
+}
+
 .tgl-container {
   height: 40vh;
   margin: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1px 1px;
+  grid-gap: 0px 0px;
 }
+
+.tgl-container div {
+  border: 0px solid grey;
+}
+
 .cell {
-  color: white;
+  color: black;
   font-size: 1rem;
   text-align: center;
   padding: 1rem;
@@ -61,7 +70,7 @@ export default {
   font-weight: 500;
 }
 .cell-1 {
-  background: deepskyblue;
+  background: white;
 }
 
 </style>
