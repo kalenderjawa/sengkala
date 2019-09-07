@@ -21,9 +21,8 @@ export default {
   },
   methods: {
     async sasiPenuh() {
-      const { k, s } = await KalenderJawa.sasi('mukarom', 1953)
+      const { k, s } = await KalenderJawa.sasi('sapar', 1953)
       const _s = s.get(k)
-      console.log(_s)
       this.cells = _s
     },
     capitalizeFirstLetter (string) {
@@ -38,11 +37,11 @@ export default {
 
 <style>
 .container {
-  margin: 5em !important;
+  margin: 2.5em 3em !important;
 }
 
 .tgl-container {
-  height: 40vh;
+  height: 50vh;
   margin: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -52,6 +51,10 @@ export default {
 
 .tgl-container div {
   border: 0px solid grey;
+}
+
+.tgl-container div:hover {
+  background-color: antiquewhite;
 }
 
 .cell {
@@ -70,7 +73,7 @@ export default {
   font-weight: 500;
 }
 .cell-1 {
-  background: white;
+  background:transparent !important;
 }
 
 </style>
