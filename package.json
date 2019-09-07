@@ -1,0 +1,23 @@
+{
+  "name": "tgl",
+  "version": "1.0.0",
+  "description": "Tanggalan",
+  "author": "Equan Pr.",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@kalenderjawa/pustaka": "^1.0.0-beta.8.esm.0",
+    "@nuxtjs/bulma": "^1.2.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4"
+  }
+}
