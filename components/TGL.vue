@@ -1,6 +1,14 @@
 <template>
-  <section class="section">
-    <div class="container"></div>
+  <section>
+    <div class="container">
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column has-text-centered">
+          <h2 class="title">Sapar 1953 J</h2>
+        </div>
+        <div class="column"></div>
+      </div>
+    </div>
     <div class="container">
       <div class="tgl-container">
         <div v-for="(cell, index) in cells">
