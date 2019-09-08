@@ -1,7 +1,7 @@
 {
   "name": "@junwatu/tgl",
   "version": "1.0.0-alpha.0",
-  "description": "Tanggalan",
+  "description": "Penanggalan Jawa Lengkap 2019 M, 2020 M",
   "author": "Equan Pr.",
   "private": true,
   "scripts": {

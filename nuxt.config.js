@@ -5,7 +5,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || 'tgl | Tanggalan Jawa 1953 J (2019 Masehi)',
+    title: 'tgl | Tanggalan Jawa 2019 M (1953 J) | KalenderJawa.Dev',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
