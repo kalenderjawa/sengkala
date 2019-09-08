@@ -1,12 +1,12 @@
 <template>
   <section>
     <div class="container">
-      <div class="columns">
+      <div class="columns is-mobile">
         <div class="column has-text-centered">
           <h3 class="title is-5 tag">{{ kurup }}</h3>
         </div>
         <div class="column has-text-centered">
-          <h3 class="title is-4">{{ sasi }} {{ taun }} J</h3>
+          <h3 class="title is-5 tag is-success">{{ sasi }} {{ taun }} J</h3>
         </div>
         <div class="column has-text-centered">
           <h3 class="title is-5 tag">{{ taunWindu }}</h3>
@@ -98,48 +98,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.tgl-id {
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  font-size: 25px;
-}
-
-.tgl-container {
-  height: 50vh;
-  margin: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 0px 0px;
-}
-
-.tgl-container div {
-  border: 0px solid grey;
-}
-
-.tgl-container div:hover {
-  background-color: antiquewhite;
-}
-
-.cell {
-  color: black;
-  font-size: 1rem;
-  text-align: center;
-  padding: 1rem;
-}
-
-.cell .tgl-num {
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-.cell .tgl-dinpar {
-  font-weight: 500;
-}
-.cell-1 {
-  background: transparent !important;
-}
-</style>
