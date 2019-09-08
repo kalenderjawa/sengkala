@@ -16,10 +16,10 @@
             </div>
             </div>
             <p class="control">
-              <input class="input" type="text" placeholder="Tahun Jawa" />
+              <input class="input" type="text" placeholder="Tahun Jawa"  required v-model="taunjawa"/>
             </p>
             <p class="control">
-              <a class="button is-primary">Ubah</a>
+              <a class="button is-primary" v-on:click="cal()">Ubah</a>
             </p>
           </div>
         </div>
@@ -35,7 +35,8 @@ export default {
   data() {
     return {
       props: KalenderJawa.araningSasi,
-      selected: 1
+      selected: 1,
+      taunjawa: 1953
     }
   },
   methods: {
@@ -44,6 +45,10 @@ export default {
     },
     capitalizeFirstLetter (string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
+    },
+    cal () {
+      console.log(this.selected)
+      console.log(this.taunjawa)
     }
   }
 }
