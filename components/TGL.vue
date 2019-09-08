@@ -2,11 +2,15 @@
   <section>
     <div class="container">
       <div class="columns">
-        <div class="column"></div>
-        <div class="column has-text-centered">
-          <h2 class="title">Suro 1953 J</h2>
+        <div class="column">
+          <p>{{ kurup }}</p>
         </div>
-        <div class="column"></div>
+        <div class="column has-text-centered">
+          <h2 class="title">{{ sasi }} {{ taun }} J</h2>
+        </div>
+        <div class="column">
+          <p>{{ taunWindu }}</p>
+        </div>
       </div>
     </div>
     <div class="container">
@@ -32,15 +36,33 @@ export default {
   name: 'TGL',
   data() {
     return {
-      cells: []
+      cells: [],
+      taun: '',
+      taunWindu: '',
+      sasi: '',
+      kurup: ''
     }
   },
   methods: {
     async sasiPenuh() {
-      const { k, s } = await KalenderJawa.sasi(1, 1953)
+      const _sasiParam = 1
+      const _taunParam = 1953
+
+      const { k, s } = await KalenderJawa.sasi(_sasiParam, _taunParam)
       const _s = s.get(k)
       this.cells = _s
-      //console.log(_s)
+
+      const _kur = await KalenderJawa.cariKurupTahunJawa(_taunParam)
+      // console.log(_kur)
+      const _taunWindu = _kur.taun.taun
+      const _sasi = KalenderJawa.araningSasi[_sasiParam - 1].wulan
+      const _kurup = `${_kur.kurup.taun} ${_kur.kurup.dinten.dino} ${_kur.kurup.pasaran.pasaran}`
+
+      this.sasi = _sasi
+      this.taun = _taunParam
+      this.taunWindu = _taunWindu
+      this.kurup = _kurup
+      // console.log(_s)
     },
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
