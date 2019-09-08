@@ -22,7 +22,7 @@
           
           <div class="column">Selasa</div>
           
-          <div class="column">Rebu</div>
+          <div class="column">Rebo</div>
           
           <div class="column">Kemis</div>
           
