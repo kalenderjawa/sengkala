@@ -18,17 +18,17 @@
       <div class="columns is-mobile araning-dino has-text-centered">
           <div class="column">Akad</div>
         
-          <div class="column">Senin</div>
+          <div class="column">Senen</div>
           
           <div class="column">Selasa</div>
           
-          <div class="column">Rabu</div>
+          <div class="column">Rebu</div>
           
-          <div class="column">Kamis</div>
+          <div class="column">Kemis</div>
           
-          <div class="column">Jumat</div>
+          <div class="column">Jemah</div>
 
-          <div class="column">Sabtu</div>
+          <div class="column">Sebtu</div>
 
       </div>
       <div class="tgl-container">
