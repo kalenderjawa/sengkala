@@ -56,11 +56,11 @@ export default {
       // console.log(_kur)
       const _taunWindu = _kur.taun.taun
       const _sasi = KalenderJawa.araningSasi[_sasiParam - 1].wulan
-      const _kurup = `${_kur.kurup.taun} ${_kur.kurup.dinten.dino} ${_kur.kurup.pasaran.pasaran}`
+      const _kurup = `${this.capitalizeFirstLetter(_kur.kurup.taun)} ${this.capitalizeFirstLetter(_kur.kurup.dinten.dino)} ${this.capitalizeFirstLetter(_kur.kurup.pasaran.pasaran)}`
 
-      this.sasi = _sasi
+      this.sasi = this.capitalizeFirstLetter(_sasi)
       this.taun = _taunParam
-      this.taunWindu = _taunWindu
+      this.taunWindu = this.capitalizeFirstLetter(_taunWindu)
       this.kurup = _kurup
       // console.log(_s)
     },
