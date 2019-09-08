@@ -2,14 +2,14 @@
   <section>
     <div class="container">
       <div class="columns">
-        <div class="column">
-          <p>{{ kurup }}</p>
+        <div class="column has-text-centered">
+          <h3 class="title is-4 tag">{{ kurup }}</h3>
         </div>
         <div class="column has-text-centered">
           <h2 class="title">{{ sasi }} {{ taun }} J</h2>
         </div>
-        <div class="column">
-          <p>{{ taunWindu }}</p>
+        <div class="column has-text-centered">
+          <h3 class="title is-4 tag">{{ taunWindu }}</h3>
         </div>
       </div>
     </div>
