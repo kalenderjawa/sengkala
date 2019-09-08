@@ -29,7 +29,7 @@
                 />
               </p>
               <p class="control">
-                <a class="button is-primary" v-on:click="cal()">Ubah</a>
+                <a class="button is-primary" v-on:click="cal()">Lihat</a>
               </p>
             </div>
           </div>
