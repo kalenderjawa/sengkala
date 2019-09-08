@@ -3,27 +3,47 @@
     <div class="container">
       <div class="columns">
         <div class="column has-text-centered">
-          <h3 class="title is-4 tag">{{ kurup }}</h3>
+          <h3 class="title is-5 tag">{{ kurup }}</h3>
         </div>
         <div class="column has-text-centered">
-          <h2 class="title">{{ sasi }} {{ taun }} J</h2>
+          <h3 class="title is-4">{{ sasi }} {{ taun }} J</h3>
         </div>
         <div class="column has-text-centered">
-          <h3 class="title is-4 tag">{{ taunWindu }}</h3>
+          <h3 class="title is-5 tag">{{ taunWindu }}</h3>
         </div>
       </div>
     </div>
     <div class="container">
+      <div>
+      <div class="columns is-mobile araning-dino has-text-centered">
+          <div class="column">Akad</div>
+        
+          <div class="column">Senin</div>
+          
+          <div class="column">Selasa</div>
+          
+          <div class="column">Rabu</div>
+          
+          <div class="column">Kamis</div>
+          
+          <div class="column">Jumat</div>
+
+          <div class="column">Sabtu</div>
+
+      </div>
       <div class="tgl-container">
         <div v-for="(cell, index) in cells">
           <div class="cell cell-1" v-on:click.capture="tglEventHandler">
             <p class="tgl-num" :id="`tgl-${index + 1}`" :data-tgl="[index + 1, cell[index+1].dinten, cell[index +1].pasaran]">{{ index + 1 }}</p>
             <p class="tgl-dinpar">
+              <!--
               <span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>
+              -->
               <span class="tgl-pas">{{ capitalizeFirstLetter(cell[index +1].pasaran) }}</span>
             </p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
