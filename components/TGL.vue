@@ -3,13 +3,13 @@
     <div class="container">
       <div class="columns is-mobile">
         <div class="column has-text-centered">
-          <h3 class="title is-5 tag">{{ kurup }}</h3>
-        </div>
-        <div class="column has-text-centered">
           <h3 class="title is-5 tag is-success">{{ sasi }} {{ taun }} J</h3>
         </div>
         <div class="column has-text-centered">
           <h3 class="title is-5 tag">{{ taunWindu }}</h3>
+        </div>
+        <div class="column has-text-centered">
+          <h3 class="title is-5 tag">{{ kurup }}</h3>
         </div>
       </div>
     </div>
