@@ -4,7 +4,7 @@
       <div class="columns">
         <div class="column"></div>
         <div class="column has-text-centered">
-          <h2 class="title">Sapar 1953 J</h2>
+          <h2 class="title">Suro 1953 J</h2>
         </div>
         <div class="column"></div>
       </div>
@@ -37,9 +37,10 @@ export default {
   },
   methods: {
     async sasiPenuh() {
-      const { k, s } = await KalenderJawa.sasi('sapar', 1953)
+      const { k, s } = await KalenderJawa.sasi(1, 1953)
       const _s = s.get(k)
       this.cells = _s
+      //console.log(_s)
     },
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
