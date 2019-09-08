@@ -1,5 +1,41 @@
 <template>
   <section>
+    <nav class="navbar is-fixed-bottom">
+      <div class="navbar-menu is-active">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field has-addons has-addons-centered">
+              <div class="control">
+                <div class="select">
+                  <select v-model="selected" v-on:change="onChangeEventHandler()">
+                    <option
+                      v-for="prop in props"
+                      v-bind:value="prop.urutan"
+                      v-bind:key="prop.urutan"
+                    >{{capitalizeFirstLetter(prop.wulan)}}</option>
+                  </select>
+                </div>
+              </div>
+              <p class="control">
+                <input
+                  class="input"
+                  type="number"
+                  placeholder="1867 - 2106"
+                  size="4"
+                  min="1867"
+                  max="2106"
+                  required
+                  v-model="taunjawa"
+                />
+              </p>
+              <p class="control">
+                <a class="button is-primary" v-on:click="cal()">Ubah</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <div class="columns is-mobile">
         <div class="column has-text-centered">
@@ -15,7 +51,8 @@
     </div>
     <div class="container">
       <div>
-      <div class="columns is-mobile araning-dino has-text-centered">
+        <div class="columns is-mobile araning-dino has-text-centered">
+          <!--
           <div class="column">Akad</div>
         
           <div class="column">Senen</div>
@@ -29,21 +66,23 @@
           <div class="column">Jemah</div>
 
           <div class="column">Sebtu</div>
-
-      </div>
-      <div class="tgl-container">
-        <div v-for="(cell, index) in cells">
-          <div class="cell cell-1" v-on:click.capture="tglEventHandler">
-            <p class="tgl-num" :id="`tgl-${index + 1}`" :data-tgl="[index + 1, cell[index+1].dinten, cell[index +1].pasaran]">{{ index + 1 }}</p>
-            <p class="tgl-dinpar">
-              <!--
-              <span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>
-              -->
-              <span class="tgl-pas">{{ capitalizeFirstLetter(cell[index +1].pasaran) }}</span>
-            </p>
+          -->
+        </div>
+        <div class="tgl-container">
+          <div v-for="(cell, index) in cells">
+            <div class="cell cell-1" v-on:click.capture="tglEventHandler">
+              <p
+                class="tgl-num"
+                :id="`tgl-${index + 1}`"
+                :data-tgl="[index + 1, cell[index+1].dinten, cell[index +1].pasaran]"
+              >{{ index + 1 }}</p>
+              <p class="tgl-dinpar">
+                <span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>
+                <span class="tgl-pas">{{ capitalizeFirstLetter(cell[index +1].pasaran) }}</span>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   </section>
@@ -60,41 +99,56 @@ export default {
       taun: '',
       taunWindu: '',
       sasi: '',
-      kurup: ''
+      kurup: '',
+      props: KalenderJawa.araningSasi,
+      selected: 1,
+      taunjawa: 1953
     }
   },
   methods: {
-    async sasiPenuh() {
-      const _sasiParam = 1
-      const _taunParam = 1953
+    async sasiPenuh(_sasiParam, _taunParam) {
+      if (
+        parseInt(_taunParam) > 2106 ||
+        parseInt(_taunParam) < 1867 ||
+        _taunParam.length == 0
+      ) {
+        alert('Masukkan angka antara 1867 - 2106!')
+      } else {
+        const { k, s } = await KalenderJawa.sasi(_sasiParam, _taunParam)
+        const _s = s.get(k)
+        this.cells = _s
 
-      const { k, s } = await KalenderJawa.sasi(_sasiParam, _taunParam)
-      const _s = s.get(k)
-      this.cells = _s
+        const _kur = await KalenderJawa.cariKurupTahunJawa(_taunParam)
+        // console.log(_kur)
+        const _taunWindu = _kur.taun.taun
+        const _sasi = KalenderJawa.araningSasi[_sasiParam - 1].wulan
+        const _kurup = `${this.capitalizeFirstLetter(
+          _kur.kurup.taun
+        )} ${this.capitalizeFirstLetter(
+          _kur.kurup.dinten.dino
+        )} ${this.capitalizeFirstLetter(_kur.kurup.pasaran.pasaran)}`
 
-      const _kur = await KalenderJawa.cariKurupTahunJawa(_taunParam)
-      // console.log(_kur)
-      const _taunWindu = _kur.taun.taun
-      const _sasi = KalenderJawa.araningSasi[_sasiParam - 1].wulan
-      const _kurup = `${this.capitalizeFirstLetter(_kur.kurup.taun)} ${this.capitalizeFirstLetter(_kur.kurup.dinten.dino)} ${this.capitalizeFirstLetter(_kur.kurup.pasaran.pasaran)}`
-
-      this.sasi = this.capitalizeFirstLetter(_sasi)
-      this.taun = _taunParam
-      this.taunWindu = this.capitalizeFirstLetter(_taunWindu)
-      this.kurup = _kurup
-      // console.log(_s)
+        this.sasi = this.capitalizeFirstLetter(_sasi)
+        this.taun = _taunParam
+        this.taunWindu = this.capitalizeFirstLetter(_taunWindu)
+        this.kurup = _kurup
+      }
     },
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     },
     tglEventHandler(event) {
-      if(event.target.hasAttribute('data-tgl')) {
+      if (event.target.hasAttribute('data-tgl')) {
         console.log(event.target.getAttribute('data-tgl'))
       }
+    },
+    onChangeEventHandler() {},
+    cal() {
+      this.sasiPenuh(this.selected, this.taunjawa)
     }
   },
   created() {
-    this.sasiPenuh()
+    this.sasiPenuh(1, 1953)
   }
 }
 </script>
