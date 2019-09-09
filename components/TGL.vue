@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <nav class="navbar is-fixed-bottom">
+  <div class="section">
+    <nav class="navbar is-fixed-bottom is-transparent">
       <div class="navbar-menu is-active">
         <div class="navbar-end">
           <div class="navbar-item">
@@ -53,8 +53,8 @@
       </div>
 
       <div>
+        <!--
         <div class="columns is-mobile araning-dino has-text-centered">
-          <!--
           <div class="column">Akad</div>
         
           <div class="column">Senen</div>
@@ -68,8 +68,8 @@
           <div class="column">Jemah</div>
 
           <div class="column">Sebtu</div>
-          -->
         </div>
+        -->
         <div class="tgl-container">
           <div v-for="(cell, index) in cells">
             <div class="cell cell-1" v-on:click.capture="tglEventHandler">
@@ -87,7 +87,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
