@@ -1,10 +1,10 @@
 <template>
-  <section class="section">
+  <div class="section">
     <!--
     <Navi/>
     -->
     <nuxt/>
-  </section>
+  </div>
 </template>
 
 <script>
