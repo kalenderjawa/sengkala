@@ -55,7 +55,7 @@
       <div>
         <div class="columns is-mobile araning-dino has-text-centered">
           <span class="column"  v-for="(cell, index) in cells" v-if="index < 7">
-          <div>{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</div>
+            <div>{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</div>
           </span>
         </div>
         <div class="tgl-container">
