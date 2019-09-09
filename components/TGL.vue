@@ -37,19 +37,21 @@
       </div>
     </nav>
     <div class="container">
-      <div class="columns is-mobile">
+      <div class="columns">
+        <div class="column"></div>
         <div class="column has-text-centered">
-          <h3 class="title is-5 tag is-success">{{ sasi }} {{ taun }} J</h3>
+          <div class="columns">
+            <div class="column">
+              <h3 class="title is-4">{{ sasi }} {{ taun }} J</h3>
+              <div class="column">
+                <h4 class="title is-6">{{ taunWindu }}, {{ kurup }}</h4>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="column has-text-centered">
-          <h3 class="title is-5 tag">{{ taunWindu }}</h3>
-        </div>
-        <div class="column has-text-centered">
-          <h3 class="title is-5 tag">{{ kurup }}</h3>
-        </div>
+        <div class="column"></div>
       </div>
-    </div>
-    <div class="container">
+
       <div>
         <div class="columns is-mobile araning-dino has-text-centered">
           <!--
