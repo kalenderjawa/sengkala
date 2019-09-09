@@ -53,23 +53,11 @@
       </div>
 
       <div>
-        <!--
         <div class="columns is-mobile araning-dino has-text-centered">
-          <div class="column">Akad</div>
-        
-          <div class="column">Senen</div>
-          
-          <div class="column">Selasa</div>
-          
-          <div class="column">Rebo</div>
-          
-          <div class="column">Kemis</div>
-          
-          <div class="column">Jemah</div>
-
-          <div class="column">Sebtu</div>
+          <span class="column"  v-for="(cell, index) in cells" v-if="index < 7">
+          <div>{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</div>
+          </span>
         </div>
-        -->
         <div class="tgl-container">
           <div v-for="(cell, index) in cells">
             <div class="cell cell-1" v-on:click.capture="tglEventHandler">
@@ -79,7 +67,7 @@
                 :data-tgl="[index + 1, cell[index+1].dinten, cell[index +1].pasaran]"
               >{{ index + 1 }}</p>
               <p class="tgl-dinpar">
-                <span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>
+                <!--<span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>-->
                 <span class="tgl-pas">{{ capitalizeFirstLetter(cell[index +1].pasaran) }}</span>
               </p>
             </div>
@@ -119,6 +107,8 @@ export default {
         const { k, s } = await KalenderJawa.sasi(_sasiParam, _taunParam)
         const _s = s.get(k)
         this.cells = _s
+
+        console.log(_s)
 
         const _kur = await KalenderJawa.cariKurupTahunJawa(_taunParam)
         // console.log(_kur)
