@@ -44,6 +44,7 @@ body {
 
 .tgl-dinpar .tgl-pas {
   color: darkorchid;
+  font-size: .7em;
 }
 
 .tgl-title {
@@ -58,11 +59,20 @@ body {
 }
 
 .tgl-container {
+  height: 50vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0px 0px;
+}
+
+.tgl-container-head {
   //height: 50vh;
   //margin: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-gap: 0px 0px;
 }
 
