@@ -42,8 +42,8 @@
         <div class="column has-text-centered">
           <div class="columns">
             <div class="column">
-              <h3 class="title is-4">{{ sasi }} {{ taun }} J</h3>
-              <div class="column">
+              <h3 class="title is-4 tgl-title">{{ sasi }} {{ taun }} J</h3>
+              <div class="column tgl-tjk">
                 <h4 class="title is-6">{{ taunWindu }}, {{ kurup }}</h4>
               </div>
             </div>
