@@ -77,11 +77,14 @@
         </div>
       </div>
     </div>
+
+    <TaskForm :value="value" :isActive="show" @close="closeModal"/>
   </div>
 </template>
 
 <script>
 import * as KalenderJawa from '@kalenderjawa/pustaka'
+import TaskForm from '~/components/TaskForm.vue'
 
 export default {
   name: 'TGL',
@@ -94,7 +97,9 @@ export default {
       kurup: '',
       props: KalenderJawa.araningSasi,
       selected: 1,
-      taunjawa: 1953
+      taunjawa: 1953,
+      show: true,
+      value: 'TEST FORM'
     }
   },
   methods: {
@@ -139,10 +144,18 @@ export default {
     onChangeEventHandler() {},
     cal() {
       this.sasiPenuh(this.selected, this.taunjawa)
+    },
+
+    closeModal() {
+      this.show = false;
     }
   },
   created() {
     this.sasiPenuh(1, 1953)
+  },
+
+  components: {
+    TaskForm
   }
 }
 </script>
