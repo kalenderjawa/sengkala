@@ -106,9 +106,12 @@ body {
 
 .app {
   font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: .07em;
   font-size: .7em;
+}
+
+.app span {
+  letter-spacing: .47em;
+  text-transform: uppercase;
 }
 
 .app-info {
