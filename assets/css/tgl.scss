@@ -119,8 +119,15 @@ body {
   font-family: $family-monospace;
 }
 
-.quick-hack-mobile-version {
-  overflow: auto;
+.ui {
+  padding-top: 0rem !important;
+}
+
+// overflow khusus media < 960px
+@media screen and (max-width: 960px) {
+  .quick-hack-mobile-version {
+    overflow: auto;
+  }  
 }
 
 // paling akhir -- last one

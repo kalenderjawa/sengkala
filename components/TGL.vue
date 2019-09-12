@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section ui">
     <nav class="navbar is-fixed-bottom is-transparent">
       <div class="navbar-menu is-active">
         <div class="navbar-end">
