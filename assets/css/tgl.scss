@@ -104,6 +104,13 @@ body {
   background: transparent !important;
 }
 
+.app {
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  font-size: .7em;
+}
+
 .app-info {
   padding: 1rem 1.5rem !important;
   font-family: $family-monospace;
