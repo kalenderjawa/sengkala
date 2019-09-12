@@ -52,7 +52,7 @@
         <div class="column"></div>
       </div>
 
-      <div>
+      <div class="quick-hack-mobile-version">
         <div class="tgl-container-head is-mobile araning-dino has-text-centered">
           <span class="column"  v-for="(cell, index) in cells" v-if="index < 7">
             <div>{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</div>
@@ -68,7 +68,9 @@
               >{{ index + 1 }}</p>
               <p class="tgl-dinpar">
                 <!--<span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>-->
+                
                 <span class="tgl-pas">{{ capitalizeFirstLetter(cell[index +1].pasaran) }}</span>
+                
               </p>
             </div>
           </div>

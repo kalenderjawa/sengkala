@@ -94,7 +94,7 @@ body {
 
 .cell .tgl-num {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .cell .tgl-dinpar {
@@ -117,6 +117,10 @@ body {
 .app-info {
   padding: 1rem 1.5rem !important;
   font-family: $family-monospace;
+}
+
+.quick-hack-mobile-version {
+  overflow: auto;
 }
 
 // paling akhir -- last one
