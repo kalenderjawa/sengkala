@@ -1,7 +1,8 @@
 @import url('https://rsms.me/inter/inter.css');
-
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
 
 $family-sans-serif: 'Inter', sans-serif;
+$family-monospace: 'IBM Plex Mono', monospace;
 
 html {
   font-family: $family-sans-serif !important;
@@ -101,6 +102,11 @@ body {
 }
 .cell-1 {
   background: transparent !important;
+}
+
+.app-info {
+  padding: 1rem 1.5rem !important;
+  font-family: $family-monospace;
 }
 
 // paling akhir -- last one
