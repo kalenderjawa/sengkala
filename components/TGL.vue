@@ -60,7 +60,7 @@
         </div>
         <div class="tgl-container">
           <div v-for="(cell, index) in cells">
-            <div class="cell cell-1" v-on:click.capture="tglEventHandler">
+            <div class="cell cell-1" v-on:click.capture="tglEventHandler" v-on:dblclick="showModal">
               <p
                 class="tgl-num"
                 :id="`tgl-${index + 1}`"
@@ -98,7 +98,7 @@ export default {
       props: KalenderJawa.araningSasi,
       selected: 1,
       taunjawa: 1953,
-      show: true,
+      show: false,
       value: 'TEST FORM'
     }
   },
@@ -138,7 +138,7 @@ export default {
     },
     tglEventHandler(event) {
       if (event.target.hasAttribute('data-tgl')) {
-       // console.log(event.target.getAttribute('data-tgl'))
+        console.log(event.target.getAttribute('data-tgl'))
       }
     },
     onChangeEventHandler() {},
@@ -148,6 +148,10 @@ export default {
 
     closeModal() {
       this.show = false;
+    },
+
+    showModal() {
+      this.show = true;
     }
   },
   created() {
