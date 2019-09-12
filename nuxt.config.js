@@ -5,11 +5,11 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'tgl | Tanggalan Jawa 2019 M (1953 J) | KalenderJawa.Dev',
+    title: 'Sengkala | Aplikasi Penanggalan Jawa Abadi 2019 M (1953 J) by KalenderJawa.Dev',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || 'Penanggalan Jawa Lengkap' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || 'Penanggalan Jawa Lengkap Abadi' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
