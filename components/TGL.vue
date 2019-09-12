@@ -150,8 +150,11 @@ export default {
       this.show = false;
     },
 
-    showModal() {
-      this.show = true;
+    showModal(event) {
+      if(event.target.getAttribute('data-tgl') !== null) {
+        this.show = true;
+        this.value = event.target.getAttribute('data-tgl')
+      }
     }
   },
   created() {
