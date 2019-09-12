@@ -110,7 +110,7 @@ export default {
         const _s = s.get(k)
         this.cells = _s
 
-        console.log(_s)
+        //console.log(_s)
 
         const _kur = await KalenderJawa.cariKurupTahunJawa(_taunParam)
         // console.log(_kur)
@@ -133,7 +133,7 @@ export default {
     },
     tglEventHandler(event) {
       if (event.target.hasAttribute('data-tgl')) {
-        console.log(event.target.getAttribute('data-tgl'))
+       // console.log(event.target.getAttribute('data-tgl'))
       }
     },
     onChangeEventHandler() {},
