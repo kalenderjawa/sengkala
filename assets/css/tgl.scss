@@ -109,9 +109,13 @@ body {
   font-size: .7em;
 }
 
-.app span {
+.app span.app-logo {
   letter-spacing: .47em;
   text-transform: uppercase;
+}
+
+.app span.app-version {
+  margin-left: -0.7em;
 }
 
 .app-info {
