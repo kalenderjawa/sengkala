@@ -83,6 +83,9 @@
 <script>
 import * as KalenderJawa from '@kalenderjawa/pustaka'
 
+const INIT_SASI = 2
+const INIT_TAUN = 1953
+
 export default {
   name: 'TGL',
   data() {
@@ -93,8 +96,8 @@ export default {
       sasi: '',
       kurup: '',
       props: KalenderJawa.araningSasi,
-      selected: 1,
-      taunjawa: 1953
+      selected: INIT_SASI,
+      taunjawa: INIT_TAUN
     }
   },
   methods: {
@@ -142,7 +145,7 @@ export default {
     }
   },
   created() {
-    this.sasiPenuh(1, 1953)
+    this.sasiPenuh(INIT_SASI, INIT_TAUN)
   }
 }
 </script>
