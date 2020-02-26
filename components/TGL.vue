@@ -83,7 +83,7 @@
 <script>
 import * as KalenderJawa from '@kalenderjawa/pustaka'
 
-const INIT_SASI = 5
+const INIT_SASI = 7
 const INIT_TAUN = 1953
 
 export default {
