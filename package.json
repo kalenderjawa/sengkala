@@ -12,14 +12,14 @@
   },
   "dependencies": {
     "@kalenderjawa/pustaka": "^1.0.0-beta.8.esm.0",
-    "@nuxtjs/bulma": "^1.2.1",
+    "@nuxtjs/bulma": "^1.2.6",
     "nuxt": "^2.11.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4",
-    "node-sass": "^4.12.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
     "sass-loader": "^7.3.1"
   }
 }
