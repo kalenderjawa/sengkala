@@ -7,12 +7,16 @@
             <div class="field has-addons has-addons-centered">
               <div class="control">
                 <div class="select">
-                  <select v-model="selected" v-on:change="onChangeEventHandler()">
+                  <select
+                    v-model="selected"
+                    v-on:change="onChangeEventHandler()"
+                  >
                     <option
                       v-for="prop in props"
                       v-bind:value="prop.urutan"
                       v-bind:key="prop.urutan"
-                    >{{capitalizeFirstLetter(prop.wulan)}}</option>
+                      >{{ capitalizeFirstLetter(prop.wulan) }}</option
+                    >
                   </select>
                 </div>
               </div>
@@ -53,8 +57,10 @@
       </div>
 
       <div class="quick-hack-mobile-version">
-        <div class="tgl-container-head is-mobile araning-dino has-text-centered">
-          <span class="column"  v-for="(cell, index) in cells" v-if="index < 7">
+        <div
+          class="tgl-container-head is-mobile araning-dino has-text-centered"
+        >
+          <span class="column" v-for="(cell, index) in cells" v-if="index < 7">
             <div>{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</div>
           </span>
         </div>
@@ -64,13 +70,20 @@
               <p
                 class="tgl-num"
                 :id="`tgl-${index + 1}`"
-                :data-tgl="[index + 1, cell[index+1].dinten, cell[index +1].pasaran]"
-              >{{ index + 1 }}</p>
+                :data-tgl="[
+                  index + 1,
+                  cell[index + 1].dinten,
+                  cell[index + 1].pasaran
+                ]"
+              >
+                {{ index + 1 }}
+              </p>
               <p class="tgl-dinpar">
                 <!--<span class="tgl-din">{{ capitalizeFirstLetter(cell[index + 1].dinten) }}</span>-->
-                
-                <span class="tgl-pas">{{ capitalizeFirstLetter(cell[index +1].pasaran) }}</span>
-                
+
+                <span class="tgl-pas">{{
+                  capitalizeFirstLetter(cell[index + 1].pasaran)
+                }}</span>
               </p>
             </div>
           </div>
@@ -136,7 +149,7 @@ export default {
     },
     tglEventHandler(event) {
       if (event.target.hasAttribute('data-tgl')) {
-       // console.log(event.target.getAttribute('data-tgl'))
+        // console.log(event.target.getAttribute('data-tgl'))
       }
     },
     onChangeEventHandler() {},
