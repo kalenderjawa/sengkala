@@ -1,7 +1,7 @@
 {
-  "name": "@junwatu/tgl",
+  "name": "@junwatu/sengkala",
   "version": "1.0.0-alpha.0",
-  "description": "Penanggalan Jawa Lengkap 2019 M, 2020 M",
+  "description": "Kalender Jawa Abadi UI",
   "author": "Equan Pr.",
   "private": true,
   "scripts": {
