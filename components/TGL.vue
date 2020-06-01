@@ -96,7 +96,7 @@
 <script>
 import * as KalenderJawa from '@kalenderjawa/pustaka'
 
-const INIT_SASI = 8
+const INIT_SASI = 10
 const INIT_TAUN = 1953
 
 export default {
