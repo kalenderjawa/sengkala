@@ -2,7 +2,7 @@
 
 Prototipe aplikasi web kalender jawa.
 
-![sengkala_scr](sengkala_screenshot.jpg)
+![sengkala_scr](sengkala_screenshot.png)
 
 ## Stack
 
