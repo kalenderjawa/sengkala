@@ -11,15 +11,15 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@kalenderjawa/pustaka": "^1.0.0-beta.8.esm.0",
-    "@nuxtjs/bulma": "^1.2.7",
-    "nuxt": "^2.12.2"
+    "@kalenderjawa/pustaka": "^1.0.0-beta.9",
+    "@nuxtjs/bulma": "^1.3.0",
+    "nuxt": "^2.14.4"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^10.0.1"
   }
 }
