@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import * as KalenderJawa from '@kalenderjawa/pustaka'
+import * as KalenderJawa from '@kalenderjawa/pustaka/lib/kalenderjawa.min.cjs'
 
 const INIT_SASI = 2
 const INIT_TAUN = 1954
@@ -113,7 +113,9 @@ export default {
       taunjawa: INIT_TAUN
     }
   },
+
   methods: {
+    
     async sasiPenuh(_sasiParam, _taunParam) {
       if (
         parseInt(_taunParam) > 2106 ||
