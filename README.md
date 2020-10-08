@@ -11,4 +11,4 @@ Prototipe UI aplikasi web kalender jawa.
 
 ----
 
-Kalenderjawa.dev © 2020 M (1953 J)
+KalenderJawa.dev © 2020 M (1953J - 1954 J)
