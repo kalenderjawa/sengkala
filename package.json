@@ -1,5 +1,5 @@
 {
-  "name": "@junwatu/sengkala",
+  "name": "@kalenderjawa/sengkala",
   "version": "1.0.0-alpha.0",
   "description": "Kalender Jawa Abadi UI",
   "author": "Equan Pr.",
@@ -11,15 +11,15 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@kalenderjawa/pustaka": "^1.0.0-beta.9",
+    "@kalenderjawa/pustaka": "^1.0.0-rc.1",
     "@nuxtjs/bulma": "^1.3.0",
-    "nuxt": "^2.14.4"
+    "nuxt": "^2.14.6"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-prettier": "^3.1.3",
     "node-sass": "^4.14.1",
-    "prettier": "^2.0.5",
-    "sass-loader": "^10.0.1"
+    "prettier": "^2.1.2",
+    "sass-loader": "^10.0.2"
   }
 }
