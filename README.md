@@ -24,4 +24,4 @@ kemudian akses aplikasi pada browser
 
 ----
 
-KalenderJawa.dev © 2020 M (1953J - 1954 J)
+[*kalenderjawa.dev*](https://kalendejawa.dev) © 2020M (1953J - 1954J)
