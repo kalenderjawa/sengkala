@@ -96,7 +96,7 @@
 <script>
 import * as KalenderJawa from '@kalenderjawa/pustaka/lib/kalenderjawa.min.cjs'
 
-const INIT_SASI = 2
+const INIT_SASI = 4
 const INIT_TAUN = 1954
 
 export default {
