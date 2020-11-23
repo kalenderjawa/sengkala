@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Sengkala | Aplikasi Penanggalan Jawa Abadi by KalenderJawa.Dev',
+    title: 'Sengkala | Kalender Jawa Online',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
