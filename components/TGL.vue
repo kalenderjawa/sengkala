@@ -15,8 +15,9 @@
                       v-for="prop in props"
                       v-bind:value="prop.urutan"
                       v-bind:key="prop.urutan"
-                      >{{ capitalizeFirstLetter(prop.wulan) }}</option
                     >
+                      {{ capitalizeFirstLetter(prop.wulan) }}
+                    </option>
                   </select>
                 </div>
               </div>
@@ -73,7 +74,7 @@
                 :data-tgl="[
                   index + 1,
                   cell[index + 1].dinten,
-                  cell[index + 1].pasaran
+                  cell[index + 1].pasaran,
                 ]"
               >
                 {{ index + 1 }}
@@ -96,7 +97,7 @@
 <script>
 import * as KalenderJawa from '@kalenderjawa/pustaka/lib/kalenderjawa.min.cjs'
 
-const INIT_SASI = 4
+const INIT_SASI = 6
 const INIT_TAUN = 1954
 
 export default {
@@ -110,12 +111,11 @@ export default {
       kurup: '',
       props: KalenderJawa.araningSasi,
       selected: INIT_SASI,
-      taunjawa: INIT_TAUN
+      taunjawa: INIT_TAUN,
     }
   },
 
   methods: {
-    
     async sasiPenuh(_sasiParam, _taunParam) {
       if (
         parseInt(_taunParam) > 2106 ||
@@ -157,10 +157,10 @@ export default {
     onChangeEventHandler() {},
     cal() {
       this.sasiPenuh(this.selected, this.taunjawa)
-    }
+    },
   },
   created() {
     this.sasiPenuh(INIT_SASI, INIT_TAUN)
-  }
+  },
 }
 </script>
